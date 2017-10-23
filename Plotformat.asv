@@ -1,0 +1,14 @@
+% Plot formatting
+%
+%figure('units','normalized','outerposition',[0 0 1 1])
+grid on
+MarkerSize =10;
+
+fig = gca;
+fig.units = 'normalized';
+fig.LineWidth = 1.2;
+fig.FontSize = 12;
+fig.TitleFontSizeMultiplier = 1.75;
+
+
+%savefig(C:\Users\Jessica\Desktop\Thesis\Figures);
