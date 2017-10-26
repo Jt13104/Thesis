@@ -1,0 +1,26 @@
+function [  ] = Plotclusters( P, I )
+% Plots the results for the features on the same graph, needs titles and
+% labels added
+figure(1)
+Plotformat
+bar(I);
+title('Amount of each result for Duration');
+xlabel(Nresults);
+savefig(amountofresults);
+saveas(gcf,'Plotcluster.png')
+
+figure(2)
+Plotformat
+for i = 1:length(P)
+   
+   plot(P{i}(:,2),P{i}(:,1),'.')
+   hold on
+end
+title('Duration');
+
+legend 
+
+savefig(Plotcluster);
+saveas(gcf,'Plotcluster.png')
+end
+
