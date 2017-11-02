@@ -2,31 +2,30 @@ function [  ] = Plotclusters( P, I )
 % Plots the results for the features on the same graph, needs titles and
 % labels added P is Gr I is amounts
 
-hold on
+
 Plotformat
 bar(I);
-title('Amount of each result for service type');
-xlabel('type of result')
-ylabel('Amount')
-saveas(gcf,'amountofresults3.png')
-savefig('amountofeach3.fig')
-hold off
+title('Amount of each attack for Feature 1');
+xlabel('Duration of attack')
+ylabel('Attack type')
+saveas(gcf,'amountofresults1.png')
+savefig('amountofeach1.fig')
 
-
-hold on
 Plotformat
-for i = 1:length(P)
+for i = 1:23
+   if  isempty(P{i}) == 1 
+       i=i+1;
+   else
+   plot(P{i}(:,1),P{i}(:,2),'o');
    
-   plot(P{i}(:,1),P{i}(:,2),'.')
+   end
+  
    hold on
 end
-title('service type');
-xlabel('service type');
+title('Duration Attack Types');
+xlabel('Duration Attack Types');
 ylabel('Result number')
+saveas(gcf,'Plotcluster2.fig')
 
-legend
-
-saveas(gcf,'Plotcluster3.png')
-hold off
 end
 

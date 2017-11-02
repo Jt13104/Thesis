@@ -1,0 +1,17 @@
+function [ NT ] = CreatsBinary( NT )
+%Creats a new column in table which is binary, 1 if normal and 2 if any
+%type of attack
+
+for r=1:height)
+    if NT.result(r) == 1
+        NT.Binary = 1;
+        
+    else
+        NT.Binary =1;
+    end
+end
+        
+
+
+end
+
